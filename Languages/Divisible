@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+
+int main(){
+   int sign=1,a[100000],i,x,p=0,n;
+	scanf("%d",&n);
+	for(i=0;i<n; i++)
+    scanf("%d",&a[i]);
+	    for(i=0; i<n/2; i++)
+	    {
+	        while(a[i]>=10)
+	       a[i]= a[i]/10;
+	       p=p+a[i]*sign;
+	       sign=sign*-1;
+	    }
+	      for(i=n/2; i<n; i++)
+	    {
+	       a[i]= a[i]%10;
+	       p=p+a[i]*sign;
+	       sign=sign*-1;
+	    }
+		if(p%11==0)
+		printf("OUI");
+       else
+		printf("NON");
+    
+}
