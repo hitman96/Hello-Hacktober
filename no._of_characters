@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+  int i,count_c=0;
+  char ch;
+  printf("Enter any character");
+  while(ch!='#')
+  {
+    scanf("%c",&ch);
+    if(ch==' ')
+    {
+      count_c++;
+    }
+  }
+  printf("number of characters=%d",count_c);
+  return 0;
+}
